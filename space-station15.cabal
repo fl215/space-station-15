@@ -29,9 +29,6 @@ library
       Data.Atmos
       Data.DamageType
       Data.GunMode
-      Data.Linear.P2
-      Data.Linear.V2
-      Data.Linear.V3
       Data.Material
       Data.Mob
       Data.MovementMode
@@ -72,6 +69,7 @@ library
     , conversion
     , directory
     , exceptions
+    , linear
     , mono-traversable
     , network
     , network-udp
@@ -103,6 +101,7 @@ executable space-station15-client
     , conversion
     , directory
     , exceptions
+    , linear
     , mono-traversable
     , network
     , network-udp
@@ -133,12 +132,46 @@ executable space-station15-server
     , conversion
     , directory
     , exceptions
+    , linear
     , mono-traversable
     , network
     , network-udp
     , random
     , sdl2
     , space-station15
+    , template-haskell
+    , text
+    , transformers
+  default-language: Haskell2010
+
+test-suite space-station15-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_space_station15
+  hs-source-dirs:
+      test
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -Wall
+  build-depends:
+      GLUT
+    , HDBC
+    , HDBC-sqlite3
+    , OpenAL
+    , OpenGL
+    , apecs
+    , base >=4.2 && <5
+    , containers
+    , conversion
+    , directory
+    , exceptions
+    , hspec >=2.0.0
+    , linear
+    , mono-traversable
+    , my-project
+    , network
+    , network-udp
+    , random
+    , sdl2
     , template-haskell
     , text
     , transformers

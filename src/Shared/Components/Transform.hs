@@ -3,10 +3,10 @@
 module Shared.Components.Transform ( Transform(..) ) where
 
 import Apecs
-import Data.Linear.V3
+import Linear (V3 (..))
 
 data Transform = Transform
-  { position :: V3
+  { position :: V3 Double
   , rotation :: Float
   } deriving Show
 instance Component Transform where type Storage Transform = Map Transform

@@ -39,6 +39,7 @@ dependencies:
 - conversion
 - mono-traversable
 - text
+- linear
 
 ghc-options:
 - -Wall
@@ -73,3 +74,12 @@ executables:
     - -with-rtsopts=-N
     dependencies:
     - space-station15
+
+tests:
+  space-station15-test:
+    main: Spec.hs
+    source-dirs: test
+    ghc-options: -Wall
+    dependencies:
+    - my-project
+    - hspec >=2.0.0
