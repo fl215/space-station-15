@@ -6,7 +6,22 @@ module Data.Material
 import Data.DamageType
 import qualified Data.Map as M
 
-data Material = Steel | Iron | Cobalt | Titanium | Lithium | Carbon | Graphite | Tungsten | Paper | Cloth | Kevlar | Glass | Plastic | Uranium deriving (Show, Read, Eq, Ord)
+data Material
+  = Steel
+  | Iron
+  | Cobalt
+  | Titanium
+  | Lithium
+  | Carbon
+  | Graphite
+  | Tungsten
+  | Paper
+  | Cloth
+  | Kevlar
+  | Glass
+  | Plastic
+  | Uranium
+  deriving (Show, Read, Eq, Ord)
 
 type Precentage = Float
 materialResistances :: M.Map Material (M.Map DamageType Precentage)

@@ -29,6 +29,7 @@ library
       Data.Atmos
       Data.DamageType
       Data.GunMode
+      Data.Health
       Data.Material
       Data.Mob
       Data.MovementMode
@@ -43,6 +44,7 @@ library
       Shared.Components.ID
       Shared.Components.InputMover
       Shared.Components.Item
+      Shared.Components.Limb
       Shared.Components.Mind
       Shared.Components.Mob
       Shared.Components.Movement
@@ -63,6 +65,7 @@ library
     , HDBC-sqlite3
     , OpenAL
     , OpenGL
+    , QuickCheck
     , apecs
     , base >=4.2 && <5
     , containers
@@ -95,6 +98,7 @@ executable space-station15-client
     , HDBC-sqlite3
     , OpenAL
     , OpenGL
+    , QuickCheck
     , apecs
     , base >=4.2 && <5
     , containers
@@ -126,6 +130,7 @@ executable space-station15-server
     , HDBC-sqlite3
     , OpenAL
     , OpenGL
+    , QuickCheck
     , apecs
     , base >=4.2 && <5
     , containers
@@ -158,6 +163,7 @@ test-suite space-station15-test
     , HDBC-sqlite3
     , OpenAL
     , OpenGL
+    , QuickCheck
     , apecs
     , base >=4.2 && <5
     , containers

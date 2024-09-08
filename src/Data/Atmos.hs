@@ -10,9 +10,37 @@ module Data.Atmos
 
 import qualified Data.Map
 
-data GasType = Hydrogen | Oxygen | Nitrogen | Xenon | Tritium | Helium3 | Neon | Helium | Chlorine | Oxygen15 | NitrousOxide | CarbonDioxide | CarbonMonoxide | WaterVapor | NitrousAcid | HydrogenSulfide | MustardGas | SulfurDioxide deriving (Show, Read, Eq)
+data GasType
+  = Hydrogen
+  | Oxygen
+  | Nitrogen
+  | Xenon
+  | Tritium
+  | Helium3
+  | Neon
+  | Helium
+  | Chlorine
+  | Oxygen15
+  | NitrousOxide
+  | CarbonDioxide
+  | CarbonMonoxide
+  | WaterVapor
+  | NitrousAcid
+  | HydrogenSulfide
+  | MustardGas
+  | SulfurDioxide
+  deriving (Show, Read, Eq)
 
-data ReactionType = TritiumFire | HydrogenFire | TritiumDecomposition | TritiumProduction | NitrousOxideFormation | MustardGasProduction | NitrousAcidProduction | NeonProduction deriving (Show, Read, Eq)
+data ReactionType
+  = TritiumFire
+  | HydrogenFire
+  | TritiumDecomposition
+  | TritiumProduction
+  | NitrousOxideFormation
+  | MustardGasProduction
+  | NitrousAcidProduction
+  | NeonProduction
+  deriving (Show, Read, Eq)
 
 newtype Temperature = Kelvin Float deriving (Show, Read, Eq)
 
@@ -21,9 +49,12 @@ data Gas = Gas
   , heat_cap :: Float
   , conductivity :: Float
   , amount :: Float
-  } deriving Show
+  } deriving (Show, Read)
 
 type ReactionData = Data.Map.Map ReactionType [Gas]
+
+defaultGas :: Gas
+defaultGas = Gas{ gas_type = Hydrogen, heat_cap = 0.0, conductivity = 0.0, amount = 0.0 }
 
 kelvinToFahrenheit :: Temperature -> String
 kelvinToFahrenheit (Kelvin t)

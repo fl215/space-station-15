@@ -39,6 +39,7 @@ dependencies:
 - conversion
 - mono-traversable
 - text
+- QuickCheck
 - linear
 
 ghc-options:

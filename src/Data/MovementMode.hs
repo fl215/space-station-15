@@ -3,8 +3,12 @@ module Data.MovementMode
   , getModeSpeed
   ) where
 
-data MovementMode = Running | Walking | Crouching | Proning
-                    deriving (Show, Read, Eq)
+data MovementMode
+  = Running
+  | Walking
+  | Crouching
+  | Proning
+  deriving (Show, Read, Eq)
 
 getModeSpeed :: MovementMode -> Float
 getModeSpeed Running    = 2

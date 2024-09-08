@@ -5,5 +5,4 @@ module Data.StatusEffect ( StatusEffect(..) ) where
 import Data.DamageType
 
 -- | Diseased Disease
-data StatusEffect = PassiveDamage DamageType
-                    deriving (Show, Read, Eq)
+data StatusEffect = PassiveDamage DamageType deriving (Show, Read, Eq)

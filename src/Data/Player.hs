@@ -1,3 +1,17 @@
-module Data.Player ( Player(..) ) where
+module Data.Player
+  ( Player(..)
+  , PlayerStatus(..)
+  , defaultPlayer
+  ) where
 
-newtype Player = Player String deriving (Show, Read, Eq)
+data PlayerStatus
+  = InMenu
+  | InGame
+  deriving (Show, Read, Eq)
+data Player = Player
+  { name :: String
+  , status :: PlayerStatus
+  } deriving (Show, Read, Eq)
+
+defaultPlayer :: Player
+defaultPlayer = Player{ name = "Player", status = InMenu }
