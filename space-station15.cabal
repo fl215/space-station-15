@@ -167,11 +167,11 @@ test-suite space-station15-test
     , hspec >=2.0.0
     , linear
     , mono-traversable
-    , my-project
     , network
     , network-udp
     , random
     , sdl2
+    , space-station15
     , template-haskell
     , text
     , transformers

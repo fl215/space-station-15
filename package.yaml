@@ -81,5 +81,5 @@ tests:
     source-dirs: test
     ghc-options: -Wall
     dependencies:
-    - my-project
+    - space-station15
     - hspec >=2.0.0
